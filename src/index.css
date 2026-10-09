@@ -1,0 +1,395 @@
+@import "tailwindcss";
+/* Saturated blue actions with semantic status colors; green remains single-accent. */
+:root {
+  --app-accent-50: #EFF6FF;
+  --app-accent-100: #DBEAFE;
+  --app-accent-200: #BFDBFE;
+  --app-accent-300: #60A5FA;
+  --app-accent-400: #3B82F6;
+  --app-accent-500: #3B82F6;
+  --app-accent-600: #2563EB;
+  --app-accent-700: #1D4ED8;
+  --app-accent-800: #1E40AF;
+  --app-accent-900: #172F63;
+  --app-accent-950: #10234A;
+  --app-success-50: #F0FDF4;
+  --app-success-100: #DCFCE7;
+  --app-success-200: #BBF7D0;
+  --app-success-300: #86EFAC;
+  --app-success-400: #4ADE80;
+  --app-success-500: #4ADE80;
+  --app-success-600: #22C55E;
+  --app-success-700: #15803D;
+  --app-success-800: #166534;
+  --app-success-900: #14532D;
+  --app-success-950: #0C2D1A;
+  --app-warning-50: #FFF7ED;
+  --app-warning-100: #FFEDD5;
+  --app-warning-200: #FED7AA;
+  --app-warning-300: #FDBA74;
+  --app-warning-400: #FB923C;
+  --app-warning-500: #FB923C;
+  --app-warning-600: #F97316;
+  --app-warning-700: #C2410C;
+  --app-warning-800: #9A3412;
+  --app-warning-900: #7C2D12;
+  --app-warning-950: #3B1D0B;
+  --app-error-50: #FFF7ED;
+  --app-error-100: #FFEDD5;
+  --app-error-200: #FED7AA;
+  --app-error-300: #FDBA74;
+  --app-error-400: #FB923C;
+  --app-error-500: #FB923C;
+  --app-error-600: #F97316;
+  --app-error-700: #C2410C;
+  --app-error-800: #9A3412;
+  --app-error-900: #7C2D12;
+  --app-error-950: #3B1D0B;
+  --app-missing-50: #FFFFFF;
+  --app-missing-100: #FFFFFF;
+  --app-missing-200: #FFFFFF;
+  --app-missing-300: #FFFFFF;
+  --app-missing-400: #FFFFFF;
+  --app-missing-500: #FFFFFF;
+  --app-missing-600: #D1D5DB;
+  --app-missing-700: #9CA3AF;
+  --app-missing-800: #4B5563;
+  --app-missing-900: #343A43;
+  --app-missing-950: #24282E;
+}
+:root[data-color-theme="green"] {
+  --app-accent-50: #F0F8F3;
+  --app-accent-100: #DAEFE2;
+  --app-accent-200: #B9DFC8;
+  --app-accent-300: #A3D9BA;
+  --app-accent-400: #8CCFA8;
+  --app-accent-500: #8CCFA8;
+  --app-accent-600: #6CAB86;
+  --app-accent-700: #477F60;
+  --app-accent-800: #345642;
+  --app-accent-900: #284534;
+  --app-accent-950: #20372B;
+  --app-success-50: var(--app-accent-50);
+  --app-success-100: var(--app-accent-100);
+  --app-success-200: var(--app-accent-200);
+  --app-success-300: var(--app-accent-300);
+  --app-success-400: var(--app-accent-400);
+  --app-success-500: var(--app-accent-500);
+  --app-success-600: var(--app-accent-600);
+  --app-success-700: var(--app-accent-700);
+  --app-success-800: var(--app-accent-800);
+  --app-success-900: var(--app-accent-900);
+  --app-success-950: var(--app-accent-950);
+  --app-warning-50: var(--app-accent-50);
+  --app-warning-100: var(--app-accent-100);
+  --app-warning-200: var(--app-accent-200);
+  --app-warning-300: var(--app-accent-300);
+  --app-warning-400: var(--app-accent-400);
+  --app-warning-500: var(--app-accent-500);
+  --app-warning-600: var(--app-accent-600);
+  --app-warning-700: var(--app-accent-700);
+  --app-warning-800: var(--app-accent-800);
+  --app-warning-900: var(--app-accent-900);
+  --app-warning-950: var(--app-accent-950);
+  --app-error-50: var(--app-accent-50);
+  --app-error-100: var(--app-accent-100);
+  --app-error-200: var(--app-accent-200);
+  --app-error-300: var(--app-accent-300);
+  --app-error-400: var(--app-accent-400);
+  --app-error-500: var(--app-accent-500);
+  --app-error-600: var(--app-accent-600);
+  --app-error-700: var(--app-accent-700);
+  --app-error-800: var(--app-accent-800);
+  --app-error-900: var(--app-accent-900);
+  --app-error-950: var(--app-accent-950);
+  --app-missing-50: var(--app-accent-50);
+  --app-missing-100: var(--app-accent-100);
+  --app-missing-200: var(--app-accent-200);
+  --app-missing-300: var(--app-accent-300);
+  --app-missing-400: var(--app-accent-400);
+  --app-missing-500: var(--app-accent-500);
+  --app-missing-600: var(--app-accent-600);
+  --app-missing-700: var(--app-accent-700);
+  --app-missing-800: var(--app-accent-800);
+  --app-missing-900: var(--app-accent-900);
+  --app-missing-950: var(--app-accent-950);
+}
+
+@theme inline {
+  --color-slate-50: #F8F9FB;
+  --color-slate-100: #F3F4F6;
+  --color-slate-200: #DFE3EA;
+  --color-slate-300: #C4CBD5;
+  --color-slate-400: #A8B0BC;
+  --color-slate-500: #919BAA;
+  --color-slate-600: #737F90;
+  --color-slate-700: #454E5C;
+  --color-slate-800: #343A43;
+  --color-slate-850: #22262B;
+  --color-slate-900: #191C20;
+  --color-slate-950: #111315;
+  --color-sky-50: var(--app-accent-50);
+  --color-sky-100: var(--app-accent-100);
+  --color-sky-200: var(--app-accent-200);
+  --color-sky-300: var(--app-accent-300);
+  --color-sky-400: var(--app-accent-400);
+  --color-sky-500: var(--app-accent-500);
+  --color-sky-600: var(--app-accent-600);
+  --color-sky-700: var(--app-accent-700);
+  --color-sky-800: var(--app-accent-800);
+  --color-sky-900: var(--app-accent-900);
+  --color-sky-950: var(--app-accent-950);
+  --color-cyan-50: var(--app-accent-50);
+  --color-cyan-100: var(--app-accent-100);
+  --color-cyan-200: var(--app-accent-200);
+  --color-cyan-300: var(--app-accent-300);
+  --color-cyan-400: var(--app-accent-400);
+  --color-cyan-500: var(--app-accent-500);
+  --color-cyan-600: var(--app-accent-600);
+  --color-cyan-700: var(--app-accent-700);
+  --color-cyan-800: var(--app-accent-800);
+  --color-cyan-900: var(--app-accent-900);
+  --color-cyan-950: var(--app-accent-950);
+  --color-blue-50: var(--app-accent-50);
+  --color-blue-100: var(--app-accent-100);
+  --color-blue-200: var(--app-accent-200);
+  --color-blue-300: var(--app-accent-300);
+  --color-blue-400: var(--app-accent-400);
+  --color-blue-500: var(--app-accent-500);
+  --color-blue-600: var(--app-accent-600);
+  --color-blue-700: var(--app-accent-700);
+  --color-blue-800: var(--app-accent-800);
+  --color-blue-900: var(--app-accent-900);
+  --color-blue-950: var(--app-accent-950);
+  --color-emerald-50: var(--app-success-50);
+  --color-emerald-100: var(--app-success-100);
+  --color-emerald-200: var(--app-success-200);
+  --color-emerald-300: var(--app-success-300);
+  --color-emerald-400: var(--app-success-400);
+  --color-emerald-500: var(--app-success-500);
+  --color-emerald-600: var(--app-success-600);
+  --color-emerald-700: var(--app-success-700);
+  --color-emerald-800: var(--app-success-800);
+  --color-emerald-900: var(--app-success-900);
+  --color-emerald-950: var(--app-success-950);
+  --color-green-50: var(--app-success-50);
+  --color-green-100: var(--app-success-100);
+  --color-green-200: var(--app-success-200);
+  --color-green-300: var(--app-success-300);
+  --color-green-400: var(--app-success-400);
+  --color-green-500: var(--app-success-500);
+  --color-green-600: var(--app-success-600);
+  --color-green-700: var(--app-success-700);
+  --color-green-800: var(--app-success-800);
+  --color-green-900: var(--app-success-900);
+  --color-green-950: var(--app-success-950);
+  --color-teal-50: var(--app-success-50);
+  --color-teal-100: var(--app-success-100);
+  --color-teal-200: var(--app-success-200);
+  --color-teal-300: var(--app-success-300);
+  --color-teal-400: var(--app-success-400);
+  --color-teal-500: var(--app-success-500);
+  --color-teal-600: var(--app-success-600);
+  --color-teal-700: var(--app-success-700);
+  --color-teal-800: var(--app-success-800);
+  --color-teal-900: var(--app-success-900);
+  --color-teal-950: var(--app-success-950);
+  --color-amber-50: var(--app-warning-50);
+  --color-amber-100: var(--app-warning-100);
+  --color-amber-200: var(--app-warning-200);
+  --color-amber-300: var(--app-warning-300);
+  --color-amber-400: var(--app-warning-400);
+  --color-amber-500: var(--app-warning-500);
+  --color-amber-600: var(--app-warning-600);
+  --color-amber-700: var(--app-warning-700);
+  --color-amber-800: var(--app-warning-800);
+  --color-amber-900: var(--app-warning-900);
+  --color-amber-950: var(--app-warning-950);
+  --color-orange-50: var(--app-warning-50);
+  --color-orange-100: var(--app-warning-100);
+  --color-orange-200: var(--app-warning-200);
+  --color-orange-300: var(--app-warning-300);
+  --color-orange-400: var(--app-warning-400);
+  --color-orange-500: var(--app-warning-500);
+  --color-orange-600: var(--app-warning-600);
+  --color-orange-700: var(--app-warning-700);
+  --color-orange-800: var(--app-warning-800);
+  --color-orange-900: var(--app-warning-900);
+  --color-orange-950: var(--app-warning-950);
+  --color-yellow-50: var(--app-warning-50);
+  --color-yellow-100: var(--app-warning-100);
+  --color-yellow-200: var(--app-warning-200);
+  --color-yellow-300: var(--app-warning-300);
+  --color-yellow-400: var(--app-warning-400);
+  --color-yellow-500: var(--app-warning-500);
+  --color-yellow-600: var(--app-warning-600);
+  --color-yellow-700: var(--app-warning-700);
+  --color-yellow-800: var(--app-warning-800);
+  --color-yellow-900: var(--app-warning-900);
+  --color-yellow-950: var(--app-warning-950);
+  --color-rose-50: var(--app-error-50);
+  --color-rose-100: var(--app-error-100);
+  --color-rose-200: var(--app-error-200);
+  --color-rose-300: var(--app-error-300);
+  --color-rose-400: var(--app-error-400);
+  --color-rose-500: var(--app-error-500);
+  --color-rose-600: var(--app-error-600);
+  --color-rose-700: var(--app-error-700);
+  --color-rose-800: var(--app-error-800);
+  --color-rose-900: var(--app-error-900);
+  --color-rose-950: var(--app-error-950);
+  --color-red-50: var(--app-error-50);
+  --color-red-100: var(--app-error-100);
+  --color-red-200: var(--app-error-200);
+  --color-red-300: var(--app-error-300);
+  --color-red-400: var(--app-error-400);
+  --color-red-500: var(--app-error-500);
+  --color-red-600: var(--app-error-600);
+  --color-red-700: var(--app-error-700);
+  --color-red-800: var(--app-error-800);
+  --color-red-900: var(--app-error-900);
+  --color-red-950: var(--app-error-950);
+  --color-indigo-50: var(--app-accent-50);
+  --color-indigo-100: var(--app-accent-100);
+  --color-indigo-200: var(--app-accent-200);
+  --color-indigo-300: var(--app-accent-300);
+  --color-indigo-400: var(--app-accent-400);
+  --color-indigo-500: var(--app-accent-500);
+  --color-indigo-600: var(--app-accent-600);
+  --color-indigo-700: var(--app-accent-700);
+  --color-indigo-800: var(--app-accent-800);
+  --color-indigo-900: var(--app-accent-900);
+  --color-indigo-950: var(--app-accent-950);
+  --color-purple-50: var(--app-success-50);
+  --color-purple-100: var(--app-success-100);
+  --color-purple-200: var(--app-success-200);
+  --color-purple-300: var(--app-success-300);
+  --color-purple-400: var(--app-success-400);
+  --color-purple-500: var(--app-success-500);
+  --color-purple-600: var(--app-success-600);
+  --color-purple-700: var(--app-success-700);
+  --color-purple-800: var(--app-success-800);
+  --color-purple-900: var(--app-success-900);
+  --color-purple-950: var(--app-success-950);
+  --color-violet-50: var(--app-success-50);
+  --color-violet-100: var(--app-success-100);
+  --color-violet-200: var(--app-success-200);
+  --color-violet-300: var(--app-success-300);
+  --color-violet-400: var(--app-success-400);
+  --color-violet-500: var(--app-success-500);
+  --color-violet-600: var(--app-success-600);
+  --color-violet-700: var(--app-success-700);
+  --color-violet-800: var(--app-success-800);
+  --color-violet-900: var(--app-success-900);
+  --color-violet-950: var(--app-success-950);
+  --color-fuchsia-50: var(--app-success-50);
+  --color-fuchsia-100: var(--app-success-100);
+  --color-fuchsia-200: var(--app-success-200);
+  --color-fuchsia-300: var(--app-success-300);
+  --color-fuchsia-400: var(--app-success-400);
+  --color-fuchsia-500: var(--app-success-500);
+  --color-fuchsia-600: var(--app-success-600);
+  --color-fuchsia-700: var(--app-success-700);
+  --color-fuchsia-800: var(--app-success-800);
+  --color-fuchsia-900: var(--app-success-900);
+  --color-fuchsia-950: var(--app-success-950);
+  --color-missing-50: var(--app-missing-50);
+  --color-missing-100: var(--app-missing-100);
+  --color-missing-200: var(--app-missing-200);
+  --color-missing-300: var(--app-missing-300);
+  --color-missing-400: var(--app-missing-400);
+  --color-missing-500: var(--app-missing-500);
+  --color-missing-600: var(--app-missing-600);
+  --color-missing-700: var(--app-missing-700);
+  --color-missing-800: var(--app-missing-800);
+  --color-missing-900: var(--app-missing-900);
+  --color-missing-950: var(--app-missing-950);
+}
+
+
+
+@layer base {
+  html {
+    scrollbar-gutter: stable;
+  }
+
+  html,
+  body {
+    overflow-x: hidden;
+    max-width: 100vw;
+    width: 100%;
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  #root {
+    max-width: 100vw;
+    width: 100%;
+    overflow-x: hidden;
+  }
+  
+  .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 8mm;
+  }
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+  body * {
+    visibility: hidden;
+  }
+  #printable-handover-sheet,
+  #printable-handover-sheet *,
+  #printable-incident-sheet,
+  #printable-incident-sheet *,
+  #printable-confiscated-sheet,
+  #printable-confiscated-sheet *,
+  #printable-correspondence-sheet,
+  #printable-correspondence-sheet *,
+  #printable-confiscated-container,
+  #printable-confiscated-container *,
+  .printable-confiscated-page,
+  .printable-confiscated-page * {
+    visibility: visible;
+  }
+  #printable-handover-sheet,
+  #printable-incident-sheet {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  #printable-confiscated-sheet,
+  #printable-correspondence-sheet,
+  .printable-confiscated-page {
+    position: relative !important;
+    left: auto !important;
+    top: auto !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  .print-page-break {
+    break-before: page !important;
+    page-break-before: always !important;
+    margin-top: 15mm !important;
+  }
+}

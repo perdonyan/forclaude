@@ -1,0 +1,6 @@
+{
+  "name": "DRONES SYSTEM SECTION - Inventory Management",
+  "description": "Inventory Management system for tracking drone fleets, sorties, and personnel.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
