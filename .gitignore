@@ -1,0 +1,16 @@
+node_modules/
+build/
+dist/
+coverage/
+.DS_Store
+*.log
+.env*
+!.env.example
+
+# Runtime database, secrets, private media and generated backups
+runtime-data/
+*.sqlite
+*.sqlite-wal
+*.sqlite-shm
+fleet-backup-*/
+
